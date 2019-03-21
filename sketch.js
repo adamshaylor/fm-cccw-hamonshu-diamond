@@ -43,8 +43,13 @@ const diamondGrid = Array.from({ length: gridCount[0] }, (emptyColumn, columnInd
   return Array.from({ length: gridCount[1] }, (emptyRow, rowIndex) => {
     return Array.from({ length: subDiamondCount }, (emptyStack, stackIndex) => {
       const sizeNoise = inverseLerp(-1, 1, random.noise4D(columnIndex, rowIndex, stackIndex, 0, noiseFrequency, noiseAmplitude));
-      const width = diamondDimensions[0] - (stackIndex * diamondDimensions[0] * sizeNoise / subDiamondCount);
-      const height = diamondDimensions[1] - (stackIndex * diamondDimensions[1] * sizeNoise / subDiamondCount);
+      
+      const widthOffset = stackIndex * diamondDimensions[0] * sizeNoise / subDiamondCount;
+      const width = diamondDimensions[0] - widthOffset;
+
+      const heightOffset = stackIndex * diamondDimensions[1] * sizeNoise / subDiamondCount;
+      const height = diamondDimensions[1] - heightOffset;
+      
       const evenBottomX = columnIndex * diamondDimensions[0];
       const bottomX = rowIndex % 2 ? evenBottomX + diamondDimensions[0] / 2 : evenBottomX
       const bottomY = (rowIndex + 1) * diamondDimensions[1] / 2;

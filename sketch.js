@@ -13,7 +13,7 @@ const settings = {
   dimensions: [ 2048, 2048 ]
 };
 
-const gridCount = [ 11, 38 ];
+const gridCount = [ 13, 22 ];
 
 // 0 to 1
 const noiseFrequency = 0.01;

@@ -13,11 +13,11 @@ const settings = {
   dimensions: [ 2048, 2048 ]
 };
 
-const gridCount = [ 13, 22 ];
+const gridCount = [ 52, 88 ];
 
 // 0 to 1
-const noiseFrequency = 0.1;
-const noiseAmplitude = 0.6;
+const noiseFrequency = 0.35;
+const noiseAmplitude = 1;
 
 const seed = random.getRandomSeed();
 random.setSeed(seed);

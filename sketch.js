@@ -16,7 +16,7 @@ const settings = {
 const gridCount = [ 13, 22 ];
 
 // 0 to 1
-const noiseFrequency = 0.01;
+const noiseFrequency = 0.04;
 const noiseAmplitude = 0.8;
 
 const seed = random.getRandomSeed();
